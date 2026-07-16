@@ -19,7 +19,7 @@ package version
 import (
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	v1beta1 "istio.io/api/meta/v1beta1"
+	istiov1 "istio.io/api/meta/v1"
 	types "istio.io/tools/cmd/kubetype-gen/testdata/test_input/positive/types"
 )
 
@@ -39,7 +39,7 @@ type EmptyKubeType struct {
 	// +optional
 	Spec types.EmptyKubeType `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
-	Status v1beta1.IstioStatus `json:",inline"`
+	Status istiov1.IstioStatus `json:",inline"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -70,7 +70,7 @@ type Type3 struct {
 	// +optional
 	Spec types.MultipleNames `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
-	Status v1beta1.IstioStatus `json:",inline"`
+	Status istiov1.IstioStatus `json:",inline"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -102,7 +102,7 @@ type Type4 struct {
 	// +optional
 	Spec types.MultipleNames `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
-	Status v1beta1.IstioStatus `json:",inline"`
+	Status istiov1.IstioStatus `json:",inline"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -131,7 +131,7 @@ type Type2 struct {
 	// +optional
 	Spec types.NameOverride `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
-	Status v1beta1.IstioStatus `json:",inline"`
+	Status istiov1.IstioStatus `json:",inline"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -158,7 +158,7 @@ type SecondCommentsKubeType struct {
 	// +optional
 	Spec types.SecondCommentsKubeType `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
-	Status v1beta1.IstioStatus `json:",inline"`
+	Status istiov1.IstioStatus `json:",inline"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -186,7 +186,7 @@ type Type1 struct {
 	// +optional
 	Spec types.Type1 `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 
-	Status v1beta1.IstioStatus `json:",inline"`
+	Status istiov1.IstioStatus `json:",inline"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
